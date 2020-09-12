@@ -29,7 +29,7 @@
 				alt="Instituto Infnet">
 			<div class="card-body">
 				<h4 class="card-title">William Felicio Freire</h4>
-				<p class="card-text">Engenharia de Computação</p>
+				<p class="card-text">Engenharia de Software</p>
 				<p class="card-text">TP3 :: Desenvolvimento de Serviços em Nuvem
 					com Java</p>
 				<a target="_blank" href="https://github.com/williamff11/client-springboot"

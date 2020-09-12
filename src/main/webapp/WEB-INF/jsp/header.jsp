@@ -10,7 +10,3 @@
 		</li>
 	</ul>
 </nav>
-
-<!-- <h3>TP's</h3> -->
-<!-- <p>Sistema de Almoxarifado</p> -->
-<!-- <a>https://github.com/williamff11/TP-springboot</a> -->
