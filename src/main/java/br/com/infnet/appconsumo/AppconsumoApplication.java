@@ -10,7 +10,7 @@ import br.com.infnet.appconsumo.model.service.EnderecoService;
 
 @SpringBootApplication
 @EnableFeignClients
-public class AppconsumoApplication implements CommandLineRunner{
+public class AppconsumoApplication{
 
 	@Autowired private EnderecoService service;
 	
@@ -18,10 +18,10 @@ public class AppconsumoApplication implements CommandLineRunner{
 		SpringApplication.run(AppconsumoApplication.class, args);
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		System.out.println("Endereco: " + service.obterPorCep("76907668"));
-		
-	}
+//	@Override
+//	public void run(String... args) throws Exception {
+//		System.out.println("Endereco: " + service.obterPorCep("76907668"));
+//		
+//	}
 
 }

@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Endereço</title>
+<title>Insert title here</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script
@@ -17,43 +16,30 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 	<div class="container">
 		<div class="container-fluid" style="margin-top: 80px">
 			<c:import url="/WEB-INF/jsp/header.jsp" />
 		</div>
 
-		<div class="form-group">
-			<form action="/cep" class="form-inline" method="post">
-
-				<input type="text" placeholder="Digite o CEP" class="form-control"
-					name="cep" value="${endereco.cep}">
-
-				<button type="submit" class="btn btn-primary">Cadastrar</button>
-			</form>
-		</div>
-
-		<table class="table table-striped">
-			<thead>
-				<tr>
-					<th>Logradouro</th>
-					<th>Complemento</th>
-					<th>Bairro</th>
-					<th>Localidade</th>
-					<th>UF</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>${endereco.logradouro}</td>
-					<td>${endereco.complemento}</td>
-					<td>${endereco.bairro}</td>
-					<td>${endereco.localidade}</td>
-					<td>${endereco.uf}</td>
-				</tr>
-			</tbody>
-		</table>
+		<c:if test="${not empty listaMunicipios}">
+			<h3>${estado} :: Municípios</h3>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Nome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="municipio" items="${listaMunicipios}">
+						<tr>
+							<td>${municipio.id}</td>
+							<td>${municipio.nome}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</c:if>
 	</div>
-
 </body>
 </html>
